@@ -1,0 +1,18 @@
+#安装adb工具，用如下命令从安卓手机上将QQ浏览器缓存的视频拷贝到电脑上
+mac : 
+    `brew install android-platform-tools`
+ubuntu :
+    ```
+    sudo add-apt-repository ppa:nilarimogard/webupd8
+    sudo apt-get update
+    sudo apt-get install android-tools-adb android-tools-fastboot
+    ```
+#连接手机，用`adb devices` 验证是否成功连接手机,然后用如下命令从手机拷贝QQ浏览器的视频缓存文件到电脑上
+
+`adb pull /sdcard/QQBrowser/视频/ .`
+
+#视频文件提取
+python decry.py 视频文件名  
+
+会提取出st格式的视频，linux上用播放器直接打开就可以播放，也可以进行格式转换。
+
